@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ai-9A-nOX">
-                                <rect key="frame" x="122.5" y="268" width="130" height="130"/>
+                                <rect key="frame" x="122.5" y="268.5" width="130" height="130"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="UbA-lC-l4d"/>
@@ -72,6 +72,9 @@
                                 <state key="normal" title="Tap!">
                                     <color key="titleColor" red="1" green="0.35969183290000001" blue="0.16365559900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZJ-de-Xhm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.90295911455633637" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,7 +92,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tapButton" destination="8ai-9A-nOX" id="Hxp-3E-E1Z"/>
+                        <outlet property="myView" destination="8bC-Xf-vdC" id="n6r-e9-7nl"/>
+                        <outlet property="tapButton" destination="8ai-9A-nOX" id="YZL-Kp-tH2"/>
                         <outlet property="tapHeightConstraint" destination="uWZ-I3-zE6" id="e1E-js-RpY"/>
                         <outlet property="tapHozCenter" destination="aGj-D0-oeg" id="A5N-wg-Rso"/>
                         <outlet property="tapVertCenter" destination="CPU-d8-AGP" id="tiH-gh-sim"/>
