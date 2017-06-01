@@ -12,6 +12,7 @@
 		040A373F1EDCFDD300D87F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040A373D1EDCFDD300D87F52 /* Main.storyboard */; };
 		040A37411EDCFDD300D87F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040A37401EDCFDD300D87F52 /* Assets.xcassets */; };
 		040A37441EDCFDD300D87F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040A37421EDCFDD300D87F52 /* LaunchScreen.storyboard */; };
+		04B65D7B1EDFD23C00F81F13 /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B65D7A1EDFD23C00F81F13 /* HighScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		040A37401EDCFDD300D87F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040A37431EDCFDD300D87F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040A37451EDCFDD300D87F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B65D7A1EDFD23C00F81F13 /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				040A37391EDCFDD300D87F52 /* AppDelegate.swift */,
 				040A373B1EDCFDD300D87F52 /* ViewController.swift */,
+				04B65D7A1EDFD23C00F81F13 /* HighScoreViewController.swift */,
 				040A373D1EDCFDD300D87F52 /* Main.storyboard */,
 				040A37401EDCFDD300D87F52 /* Assets.xcassets */,
 				040A37421EDCFDD300D87F52 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				040A373C1EDCFDD300D87F52 /* ViewController.swift in Sources */,
 				040A373A1EDCFDD300D87F52 /* AppDelegate.swift in Sources */,
+				04B65D7B1EDFD23C00F81F13 /* HighScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				040A374A1EDCFDD300D87F52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

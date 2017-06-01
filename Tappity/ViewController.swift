@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     
     // MARK: - Outlets
-    
+
     @IBOutlet var myView: UIView!
     
     @IBOutlet weak var tapButton: UIButton!
@@ -28,10 +28,12 @@ class ViewController: UIViewController {
     // MARK: - Globals
     
     var firstTap = true
-    var timeCounter = 30
+    var timeCounter = 10
     var score = 0
     
     let colorCycle = [UIColor.red, UIColor.blue, UIColor.green, UIColor.yellow, UIColor.purple, UIColor.brown, UIColor.orange, UIColor.white, UIColor.cyan, UIColor.gray]
+    
+    var highScores = [Int]()
     
     //MARK: - Functions
     
@@ -78,11 +80,17 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Game Over", message: "Your score was \(score)", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
         self.present(alert, animated: true, completion: resetGame)
+        
+        for i in 0..<10{
+            highScores.append(UserDefaults.standard.integer(forKey: "tappity\(i)"))
+        }
+        
+        
     }
     
     func resetGame(){
         score = 0
-        timeCounter = 30
+        timeCounter = 10
         firstTap = true
         timeRemaining.text = "\(timeCounter)"
         userScore.text = "\(score)"
