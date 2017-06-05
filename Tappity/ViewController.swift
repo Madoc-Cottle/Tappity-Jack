@@ -68,11 +68,10 @@ class ViewController: UIViewController {
                 }
                 
             }
-        } else {
-            score += 1
-            userScore.text = "\(score)"
-            myView.backgroundColor = colorCycle[Int(arc4random_uniform(UInt32(colorCycle.count)))]
         }
+        score += 1
+        userScore.text = "\(score)"
+        myView.backgroundColor = colorCycle[Int(arc4random_uniform(UInt32(colorCycle.count)))]
         
     }
     
@@ -81,10 +80,32 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: nil))
         self.present(alert, animated: true, completion: resetGame)
         
+        //**highscore management**
+        
+        //preexisting highscores
+        highScores = []
         for i in 0..<10{
-            highScores.append(UserDefaults.standard.integer(forKey: "tappity\(i)"))
+            highScores.append(UserDefaults.standard.integer(forKey: "score\(i)"))
         }
         
+        //sort array in order of highest to lowest just in case (should already be sorted)
+        highScores.sort(by: >)
+        
+        if score > highScores[highScores.count - 1] {
+            highScores.removeLast()
+            highScores.append(score)
+            highScores.sort(by: >)
+            
+            //got a highscore!
+            //make a dictionary to link name with score.
+        }
+        
+        
+        //add highscores to userdefaults
+        for i in 0..<10 {
+            UserDefaults.standard.set(highScores[i], forKey: "score\(i)")
+            UserDefaults.standard.synchronize()
+        }
         
     }
     
