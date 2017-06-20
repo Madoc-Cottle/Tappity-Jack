@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     let colorCycle = [UIColor.red, UIColor.blue, UIColor.green, UIColor.yellow, UIColor.purple, UIColor.brown, UIColor.orange, UIColor.white, UIColor.cyan, UIColor.gray]
     
     var highScores = [Int]()
+    var highNames = [String?]()
     
     //MARK: - Functions
     
@@ -84,12 +85,11 @@ class ViewController: UIViewController {
         
         //preexisting highscores
         highScores = []
+        highNames = []
         for i in 0..<10{
             highScores.append(UserDefaults.standard.integer(forKey: "score\(i)"))
+            highNames.append(UserDefaults.standard.string(forKey: "name\(i)"))
         }
-        
-        //sort array in order of highest to lowest just in case (should already be sorted)
-        highScores.sort(by: >)
         
         if score > highScores[highScores.count - 1] {
             highScores.removeLast()
@@ -97,7 +97,21 @@ class ViewController: UIViewController {
             highScores.sort(by: >)
             
             //got a highscore!
-            //make a dictionary to link name with score.
+        
+            
+            
+            /*
+            let highAlert = UIAlertController(title: "New High Score!", message: "Enter your name:", preferredStyle: .alert)
+            highAlert.addTextField { (textField) in
+                textField.placeholder = "name"
+            }
+            highAlert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [weak highAlert] (_) in
+                let textField = highAlert!.textFields![0]
+                print("Text Field: \(textField.text)")
+            }))
+            self.present(alert, animated: true, completion: resetGame)
+
+            */
         }
         
         
